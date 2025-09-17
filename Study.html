@@ -379,10 +379,10 @@ var Instr_EC_intermediary_NoContingency = {
       html += "<h1>TASK 2</h1>";
       html += "<p class = 'justify'>TASK 2 is similar to TASK 1 in the sense that ";
       html += "you will again be presented with a series of 16 pairs of pictures. ";
-      html += "<br>However, <u>this time, faces of the blue/yellow group will be consistently presented with pleasant/unpleasant pictures.</u></br> More specific information on which group is presented with which type of picture will follow after the task. <br><br>"
+      html += "<b>However, <u>this time faces of one group (blue or yellow) will be consistently presented with pleasant pictures whereas the faces of the other group will be consistently presented with unpleasant pictures.</u></b></br> Information about which group is presented with which type of picture will follow after the task. <br>"
       html += "<p class='justify'>As before, your task will be to <b><u>look carefully at ";
       html += "all the pictures</u> (i.e., both pictures on the left and on the right). </b>The task will be automatically paced, <b>please remain focused.<br><br></b></p>";
-      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start TASK 1</p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
     },
   };
@@ -400,7 +400,7 @@ var Instr_EC_intermediary_NoContingency = {
       html += "</ul>";
       html += "<p class = 'justify'>Please read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b></p>";
       html += "<br><br>";
-      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 1</p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 2</p>";
       return html;
     },
   };
@@ -418,7 +418,22 @@ var Instr_EC_intermediary_NoContingency = {
       html += "</ul>";
       html += "<p class = 'justify'>Please read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b></p>";
       html += "<br><br>";
-      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 1</p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 2</p>";
+      return html;
+    },
+  };
+
+var Instr_EC_instruction_UpcomingTask = {
+    type: "html-keyboard-response",
+    post_trial_gap: 300,
+    choices: [32],
+    stimulus: function () {
+      var html = "";
+      html += "<h1>TASK 2</h1>";
+      html += "<p class = 'justify'>TASK 2 is similar to TASK 1 in the sense that ";
+      html += "you will again be presented with a series of 16 pairs of pictures. ";
+      html += "<b>However, <u>this time faces of one group (blue or yellow) will be consistently presented with pleasant pictures whereas the faces of the other group will be consistently presented with unpleasant pictures.</u></b></br> Information about which group is presented with which type of picture will be presented on the next screen. <br></p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
     },
   };
@@ -434,9 +449,9 @@ var Instr_EC_3_posBlue_instruction = {
       html += "<li><strong>The faces that will be presented together with <b><u>pleasant images</b></u> will always be those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
       html += "<li><strong>The faces that will be presented together with <u><b>unpleasant images</b></u> will always be those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
-      html += "<p class = 'justify'></b>Before experiencing this upcoming task <b>you will answer a few questions.</b> You will go through this task at the very end of the experiment. Therefore, read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b></p>";
+      html += "<p class = 'justify'>Please read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b>. Before experiencing this upcoming task <b>you will answer a few questions.</b> You will go through this task at the very end of the experiment. Therefore, read carefully and make sure that you memorize the information above.</p></b>";
       html += "<br><br>";
-      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 1</p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
     },
   };
@@ -452,9 +467,9 @@ var Instr_EC_3_posYellow_instruction = {
       html += "<li><strong>The faces that will be presented together with <b><u>unpleasant images</b></u> will always be those of the <span style='color:#2a57ea'><b>blue</b></span> group</strong></li>";
       html += "<li><strong>The faces that will be presented together with <u><b>pleasant images</b></u> will always be those of the <b><span style='color:#b5a21b'><b>yellow</b></span>  group</strong></li>";
       html += "</ul>";
-      html += "<p class = 'justify'></b>Before experiencing this upcoming task <b>you will answer a few questions.</b> You will go through this task at the very end of the experiment. Therefore, read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b></p>";
+      html += "<p class = 'justify'>Please read carefully and make sure that you memorize the information above. <b>It is extremely important that you remember this information</b></b>. Before experiencing this upcoming task <b>you will answer a few questions.</b> You will go through this task at the very end of the experiment. Therefore, read carefully and make sure that you memorize the information above.</p></b>";
       html += "<br><br>";
-      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to start Task 1</p>";
+      html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to continue</p>";
       return html;
     },
   };
@@ -510,7 +525,7 @@ var Instr_EC_3_posYellow_instruction = {
     },
     stimulus: function() {
       var html = "";
-      html += "<p class='justify'>Now, we will ask you a few questions about the previous tasks and about yourself. ";
+      html += "<p class='justify'>Now, we will ask you a few questions about TASK 2 and about yourself. ";
       html += "It is extremely important that you try to answer <b>as honestly and as spontaneously as possible.</b></br></br>";
       html += "<p></br>Press <span class='light-keys'><kbd>space</kbd></span> to begin</p>";
       return html;
@@ -589,13 +604,13 @@ var reportedPairing_instr = {
 // Believability of the contingencies
 
 var beliefScale = [
-  "1<br>Not at all accurate","2","3","4","5","6","7","8","9","10<br>Totally accurate"
+  "1<br>Not at all accurate","2","3","4","5<br>Totally accurate"
 ];
 
 // for yellowpos
 var questionsBelief_yellowpos = [
   {
-    prompt: "The instructions about the second series of 16 trials (TASK 2) specified that this series consisted of two types of trials: (1) yellow group members presented together with pleasant pictures and (2) blue group members presented together with unpleasant pictures. At the time that you read this instruction, to what extent did you believe that this instruction provided an accurate description of the second series of 16 trials?",
+    prompt: "The instructions about the second series of 16 trials (TASK 2) specified that this series consists of two types of trials: (1) trials in which yellow group members are presented together with pleasant pictures and (2) trials in which blue group members are presented together with unpleasant pictures. At the time that you read this instruction, to what extent did you believe that this instruction provided an accurate description of the second series of 16 trials? It is crucial that you answer honestly.",
     labels: beliefScale,
     required: true
   }
@@ -615,7 +630,7 @@ var BeliefContingencies_yellowpos = {
 //for bluepos
 var questionsBelief_bluepos = [
   {
-    prompt: "The instructions about the second series of 16 trials (TASK 2) specified that this series consisted of two types of trials: (1) blue group members presented together with pleasant pictures and (2) yellow group members presented together with unpleasant pictures. At the time that you read this instruction, to what extent did you believe that this instruction provided an accurate description of the second series of 16 trials?",
+    prompt: "The instructions about the second series of 16 trials (TASK 2) specified that this series consists of two types of trials: (1) trials in which blue group members are presented together with pleasant pictures and (2) trials in which yellow group members are presented together with unpleasant pictures. At the time that you read this instruction, to what extent did you believe that this instruction provided an accurate description of the second series of 16 trials? It is crucial that you answer honestly.",
     labels: beliefScale,
     required: true
   }
@@ -866,6 +881,7 @@ var BeliefContingencies_bluepos = {
   case "instruction_blue_pos_G1B":
     timeline.push(Instr_EC_2_G1B,
       Instr_EC_intermediary_NoContingency,
+      Instr_EC_instruction_UpcomingTask,
                     Instr_EC_3_posBlue_instruction,
                     Instr_Quest,
                     likingGrp,
@@ -876,6 +892,7 @@ var BeliefContingencies_bluepos = {
   case "instruction_yellow_pos_G1B":
     timeline.push(Instr_EC_2_G1B,
       Instr_EC_intermediary_NoContingency,
+      Instr_EC_instruction_UpcomingTask,
                     Instr_EC_3_posYellow_instruction,
                     Instr_Quest,
                     likingGrp,
@@ -886,6 +903,7 @@ var BeliefContingencies_bluepos = {
   case "instruction_blue_pos_G1Y":
     timeline.push(Instr_EC_2_G1Y,
       Instr_EC_intermediary_NoContingency,
+      Instr_EC_instruction_UpcomingTask,
                     Instr_EC_3_posBlue_instruction,
                     Instr_Quest,
                     likingGrp,
@@ -896,6 +914,7 @@ var BeliefContingencies_bluepos = {
   case "instruction_yellow_pos_G1Y":
     timeline.push(Instr_EC_2_G1Y,
       Instr_EC_intermediary_NoContingency,
+      Instr_EC_instruction_UpcomingTask,
                     Instr_EC_3_posYellow_instruction,
                     Instr_Quest,
                     likingGrp,
